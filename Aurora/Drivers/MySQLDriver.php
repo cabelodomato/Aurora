@@ -97,7 +97,7 @@ class MySQLDriver implements \Aurora\Drivers\BaseDriver
             ';port=' . $this->port,
             $this->user,
             $this->password,
-            array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8")
+            array(\PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8")
         );
     }
 }
