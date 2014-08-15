@@ -96,7 +96,8 @@ class MySQLDriver implements \Aurora\Drivers\BaseDriver
             'mysql:host=' . $this->host . ';dbname=' . $this->dbname . 
             ';port=' . $this->port,
             $this->user,
-            $this->password
+            $this->password,
+            array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8")
         );
     }
 }
